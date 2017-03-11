@@ -6,12 +6,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contacts"
+        android:gravity="center"
         android:textSize="30dp"
-        android:gravity="center"/>
+        android:text="상세"
+        />
     <Button
+        android:id="@+id/btGo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btGo"
-        android:text="주소록가기"/>
+        android:text="디테일가기"
+        android:background="#bc8c8c"/>
+
 </LinearLayout>

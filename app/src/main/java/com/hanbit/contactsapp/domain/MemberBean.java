@@ -5,22 +5,26 @@ package com.hanbit.contactsapp.domain;
  */
 
 public class MemberBean {
-    protected String seq, phone, name, addr;
+    protected String id,name,age,phone,address,salary;
 
-    public String getSeq() {
-        return seq;
+    @Override
+    public String toString() {
+        return "MemberBean{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", salary='" + salary + '\'' +
+                '}';
     }
 
-    public void setSeq(String seq) {
-        this.seq = seq;
+    public String getId() {
+        return id;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -31,21 +35,35 @@ public class MemberBean {
         this.name = name;
     }
 
-    public String getAddr() {
-        return addr;
+    public String getAge() {
+        return age;
     }
 
-    public void setAddr(String addr) {
-        this.addr = addr;
+    public void setAge(String age) {
+        this.age = age;
     }
 
-    @Override
-    public String toString() {
-        return "MemberBean{" +
-                "seq='" + seq + '\'' +
-                ", phone='" + phone + '\'' +
-                ", name='" + name + '\'' +
-                ", addr='" + addr + '\'' +
-                '}';
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getSalary() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
     }
 }
