@@ -10,22 +10,18 @@ import com.hanbit.contactsapp.dao.DatabaseHelper;
 import com.hanbit.contactsapp.presentation.MemberlistActivity;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-         findViewById(R.id.btGo).setOnClickListener(new View.OnClickListener(){
+        this.setContentView(R.layout.activity_main);
+        findViewById(R.id.btGo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"고고고",Toast.LENGTH_LONG).show();
-                DatabaseHelper helper=new DatabaseHelper(MainActivity.this);//내가(MainActivity) 있는 여기(this)
-                startActivity(new Intent(MainActivity.this,MemberlistActivity.class));
+                Toast.makeText(MainActivity.this, "Go List !", Toast.LENGTH_SHORT).show();
+                DatabaseHelper helper = new DatabaseHelper(MainActivity.this);
+                startActivity(new Intent(MainActivity.this, MemberlistActivity.class));
+
             }
         });
     }
-
-
-
 }

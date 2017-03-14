@@ -16,8 +16,8 @@ public abstract class ListQuery extends QueryFactory {
     public ListQuery(Context context) {
 
         super(context);
-        helper=new DatabaseHelper(context);
-    }
+    helper=new DatabaseHelper(context);
+}
 
     @Override
     public SQLiteDatabase getDatabase() {

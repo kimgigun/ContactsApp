@@ -3,18 +3,9 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView
+    <ListView
+        android:id="@+id/mList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:text="상세"
-        />
-    <Button
-        android:id="@+id/btGo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="디테일가기"
-        android:background="#bc8c8c"/>
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

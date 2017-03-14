@@ -9,8 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class DatabaseHelper extends SQLiteOpenHelper{
-    final static String DATABASE_NAME="hanbit.db";
-    final static Integer DATABASE_VERSION=1;
+    final static String DATABASE_NAME="kk.db";
+    final static Integer DATABASE_VERSION=2;
     public DatabaseHelper(Context context) {
 
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -26,7 +26,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                 "age TEXT," +
                 "address TEXT," +
                 "salary TEXT);");
-      /*  for(int i=0;i<10;i++){
+     /*for(int i=0;i<10;i++){
             db.execSQL(String.format("INSERT INTO Member(name,phone,age,address,salary) " +
                     "VALUES('%s','%s','%s','%s','%s');","홍길동"+i,"010-0000-000"+i,"2"+i,"서울",(i+1)+"00"));
         }*/

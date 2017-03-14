@@ -1,19 +1,22 @@
 package com.hanbit.contactsapp.dao;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by hb2004 on 2017-03-10.
+ * Created by hb2002 on 2017-03-10.
  */
 
-public abstract class DetailQuery extends QueryFactory{
-    public  DetailQuery(Context context,Boolean isSelect) {
+public abstract  class DetailQuery extends QueryFactory{
+    SQLiteOpenHelper helper;
+    public  DetailQuery(Context context){
         super(context);
+        helper=new DatabaseHelper(context);
     }
-
-    public DetailQuery(Context context) {
-        super(context);
+    @Override
+    public SQLiteDatabase getDatabase(){
+        return helper.getReadableDatabase();
     }
-
-    public abstract Object detail(String sql);
+    public abstract Object findOne(String sql);
 }
